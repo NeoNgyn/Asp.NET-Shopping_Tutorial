@@ -1,0 +1,12 @@
+﻿@using Shopping_Tutorial.Models.Momo
+@model MomoExecuteResponseModel
+
+@{
+	ViewData["Title"] = "Successful payment transaction information results";
+}
+
+<h5>Checkout with MoMo successfully: </h5>
+<h6>OrderId: @Model.OrderId</h6>
+<h6>OrderInfo: @Model.OrderInfo</h6>
+<h6>Amount: @Model.Amount</h6>
+<h5>View <a asp-controller="Account" asp-action="OrderHistory"/>Order History</h5>

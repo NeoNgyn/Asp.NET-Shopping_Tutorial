@@ -1,0 +1,137 @@
+﻿@model CouponModel
+@{
+	ViewData["title"] = "Create Coupon";
+}
+<h1>Create Coupon</h1>
+<div class="col-md-9">
+	<form asp-action="Create" method="post" enctype="multipart/form-data">
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<div class="form-group">
+			<label asp-for="Name"></label>
+			<input asp-for="Name" class="form-control" />
+			<span asp-validation-for="Name" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="Description"></label>
+			<textarea asp-for="Description" class="form-control"></textarea>
+			<span asp-validation-for="Description" class="text-danger"></span>
+		</div>
+		
+		<div class="form-group">
+			<label asp-for="Quantity"></label>
+			<input asp-for="Quantity" class="form-control" />
+			<span asp-validation-for="Quantity" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="DateStart"></label>
+			<input asp-for="DateStart" class="form-control" />
+			<span asp-validation-for="DateStart" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="DateEnd"></label>
+			<input asp-for="DateEnd" class="form-control" />
+			<span asp-validation-for="DateEnd" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="Status"></label>
+			<select asp-for="Status" class="form-control">
+				<option value="1">Display</option>
+				<option value="0">Hidden</option>
+
+			</select>
+			<span asp-validation-for="Status" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+			<button class="btn btn-primary">Create</button>
+		</div>
+	</form>
+
+    <table class="table table-striped" id="mytable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Date Started</th>
+                <th>Date Expired</th>
+                <th>Quantity</th>
+                <th>Active</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var coupon in ViewBag.Coupons)
+            {
+                <tr>
+                    <td>@coupon.Name</td>
+                    <td>@Html.Raw(@coupon.Description)</td>
+                    <td>@coupon.DateStart.ToString("dd-MM-yyyy")</td>
+                    <td>@coupon.DateEnd.ToString("dd-MM-yyyy")</td>
+                    <td>@coupon.Quantity</td>
+                    <td>
+                        @if (@coupon.Status == 1)
+                        {
+                            <select name="Status">
+                                <option selected value="1">Active</option>
+                                <option value="0">Hidden</option>
+                            </select>
+                        }
+                        else
+                        {
+                            <select name="Status">
+                                <option value="1">Active</option>
+                                <option selected value="0">Hidden</option>
+                            </select>
+                        }
+
+                    </td>
+
+                    <td>
+                        @if (coupon.DateEnd < DateTime.Now)
+                        {
+                            <span class="text text-danger">Expired</span>
+                        }
+                        else
+                        {
+                            TimeSpan remainingTime = coupon.DateEnd - DateTime.Now;
+                            int daysRemaining = remainingTime.Days;
+                            @if (daysRemaining == 0)
+                            {
+                                <span class="text text-danger">Today</span>
+                            }
+                            else
+                            {
+                                <span class="text text-success">@daysRemaining days left</span>
+                            }
+
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+	
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	<script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+	<script>
+		CKEDITOR.replace( 'Description' );
+	</script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

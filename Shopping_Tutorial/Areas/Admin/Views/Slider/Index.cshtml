@@ -1,0 +1,63 @@
+﻿@model IEnumerable<SliderModel>
+
+@{
+    ViewData["title"] = "Slider List";
+
+    Paginate pager = new Paginate();
+
+    int pageNo = 0;
+
+    if (ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+}
+<h4>List Slider</h4>
+<a class="btn btn-success" asp-area="Admin" asp-action="Create" asp-controller="Slider">Add new Slider</a>
+<table class="table" id="mytable">
+    <thead>
+        <tr>
+            <th scope="col">Slider Id</th>
+            <th scope="col">Slider Name</th>
+            <th scope="col">Slider Description</th>
+            <th scope="col">Slider Image</th>
+            <th scope="col">Slider Status</th>
+            <th>Manage</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Name</td>
+                <td>@Html.Raw(@item.Description)</td>
+                <td><img src="~/media/sliders/@item.Image" alt="Alternate Text" width="300px" height="200px" /></td>
+                <td>
+                    @if (item.Status == 1)
+                    {
+                        <span class="text text-success">Displayed</span>
+                    }
+                    else
+                    {
+                        <span class="text text-danger">Hidden</span>
+                    }
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-controller="Slider" asp-route-id="@item.Id">
+                        <i class="bi bi-pencil"></i>
+                        Edit
+                    </a>
+                    <a class="btn btn-danger confirmDeletion" asp-action="Delete" asp-controller="Slider" asp-route-id="@item.Id">
+                        <i class="bi bi-trash"></i>
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<partial name="_paging" model="@pager" /> 
+

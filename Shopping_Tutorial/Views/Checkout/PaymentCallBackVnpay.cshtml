@@ -1,0 +1,16 @@
+﻿@using Shopping_Tutorial.Models.Vnpay
+@model VnpayInfoModel
+
+@{
+	ViewData["Title"] = "Successful payment transaction information results";
+}
+
+<h5>Checkout with VnPay successfully: </h5>
+<h6>OrderId: @Model.OrderId</h6>
+<h6>OrderInfo: @Model.OrderDescription</h6>
+<h6>Name: @Model.Name</h6>
+<h6>Amount: @Model.Amount.ToString("#, ##0 VND")</h6>
+<h6>TransactionId: @Model.TransactionId</h6>
+<h6>PaymentId: @Model.PaymentId</h6>
+<h6>DatePaid: @Model.DatePaid</h6>
+<h5>View <a asp-controller="Account" asp-action="OrderHistory"/>Order History</h5>

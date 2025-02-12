@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ProductModel>
+
+@{
+    ViewData["title"] = "Product List";
+}
+<h4>List Product</h4>
+<a class="btn btn-success" asp-area="Admin" asp-action="Create" asp-controller="Product">Add new Product</a>
+<table class="table" id="mytable">
+    <thead>
+        <tr>
+            <th scope="col"> Id</th>
+            <th scope="col"> Name</th>
+            <th scope="col"> Quantity</th>
+            <th scope="col"> Sold</th>
+            <th scope="col"> Slug</th>
+            <th scope="col"> Description</th>
+            <th scope="col"> Price</th>
+            <th scope="col">Capital Price</th>
+            <th scope="col"> Image</th>
+            <th scope="col">Categroy</th>
+            <th scope="col">Brand</th>
+            <th>Manage</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Name</td>
+                <td><b>@item.Quantity</b><br/><a asp-controller="Product" asp-action="AddQuantity" asp-route-id="@item.Id">Add Quantity</a></td>
+                <td>@item.SoldQuantity</td>
+                <td>@item.Slug</td>
+                <td>@Html.Raw(@item.Description)</td>
+                <td>@item.Price.ToString("c")</td>
+                <td>@item.CapitalPrice.ToString("c")</td>
+                <td>
+                    <img src="~/media/products/@item.Image" alt="@item.Name" style="max-width: 100px; height: auto;" />
+                </td>
+                <td>@item.Category.Name</td>
+                <td>@item.Brand.Name</td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-controller="Product" asp-route-id="@item.Id">
+                        <i class="bi bi-pencil"></i>
+                        Edit
+                    </a>
+                    <a class="btn btn-danger confirmDeletion" asp-action="Delete" asp-controller="Product" asp-route-id="@item.Id">
+                        <i class="bi bi-trash"></i>
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts{
+    <script>
+        let table = new DataTable('#mytable');
+    </script>
+}

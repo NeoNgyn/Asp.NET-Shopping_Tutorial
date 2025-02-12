@@ -1,0 +1,28 @@
+﻿@using Shopping_Tutorial.Models.Momo
+@model MomoInfoModel
+
+@{
+    ViewData["title"] = "Momo Info";
+}
+<h4>Momo Info</h4>
+<table class="table" id="mytable">
+    <thead>
+        <tr>
+            <th scope="col">OrderId</th>
+            <th scope="col">OrderInfo</th>
+            <th scope="col">FullName</th>
+            <th scope="col">Amount</th>
+            <th scope="col">DatePaid</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <th scope="row">@Model.OrderId</th>
+            <td>@Model.OrderInfo</td>
+            <td>@Model.FullName</td>
+            <td>@Model.Amount.ToString("#, ##0 VND")</td>
+            <td>@Model.DatePaid.ToString()</td>
+        </tr>
+    </tbody>
+</table>

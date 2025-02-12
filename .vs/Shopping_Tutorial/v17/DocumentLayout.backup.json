@@ -1,0 +1,220 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|d:\\lap_trinh_asp.net\\shopping_tutorial\\shopping_tutorial\\views\\account\\paymentinfovnpay.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|solutionrelative:shopping_tutorial\\views\\account\\paymentinfovnpay.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|d:\\lap_trinh_asp.net\\shopping_tutorial\\shopping_tutorial\\views\\checkout\\paymentcallbackvnpay.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|solutionrelative:shopping_tutorial\\views\\checkout\\paymentcallbackvnpay.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|d:\\lap_trinh_asp.net\\shopping_tutorial\\shopping_tutorial\\areas\\admin\\views\\order\\paymentinfovnpay.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|solutionrelative:shopping_tutorial\\areas\\admin\\views\\order\\paymentinfovnpay.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|d:\\lap_trinh_asp.net\\shopping_tutorial\\shopping_tutorial\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|solutionrelative:shopping_tutorial\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|d:\\lap_trinh_asp.net\\shopping_tutorial\\shopping_tutorial\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|solutionrelative:shopping_tutorial\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|d:\\lap_trinh_asp.net\\shopping_tutorial\\shopping_tutorial\\views\\account\\orderhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|solutionrelative:shopping_tutorial\\views\\account\\orderhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|d:\\lap_trinh_asp.net\\shopping_tutorial\\shopping_tutorial\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A732E0A6-952D-4A78-8FFC-49459C5B0924}|Shopping_Tutorial\\Shopping_Tutorial.csproj|solutionrelative:shopping_tutorial\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 766,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 20,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 156,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaymentInfoVnpay.cshtml",
+              "DocumentMoniker": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Views\\Account\\PaymentInfoVnpay.cshtml",
+              "RelativeDocumentMoniker": "Shopping_Tutorial\\Views\\Account\\PaymentInfoVnpay.cshtml",
+              "ToolTip": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Views\\Account\\PaymentInfoVnpay.cshtml",
+              "RelativeToolTip": "Shopping_Tutorial\\Views\\Account\\PaymentInfoVnpay.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T06:37:28.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PaymentCallBackVnpay.cshtml",
+              "DocumentMoniker": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Views\\Checkout\\PaymentCallBackVnpay.cshtml",
+              "RelativeDocumentMoniker": "Shopping_Tutorial\\Views\\Checkout\\PaymentCallBackVnpay.cshtml",
+              "ToolTip": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Views\\Checkout\\PaymentCallBackVnpay.cshtml",
+              "RelativeToolTip": "Shopping_Tutorial\\Views\\Checkout\\PaymentCallBackVnpay.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T06:36:25.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Shopping_Tutorial\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Shopping_Tutorial\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAACUBAAAAAAAAAAAuwCoBAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T06:30:42.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderHistory.cshtml",
+              "DocumentMoniker": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Views\\Account\\OrderHistory.cshtml",
+              "RelativeDocumentMoniker": "Shopping_Tutorial\\Views\\Account\\OrderHistory.cshtml",
+              "ToolTip": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Views\\Account\\OrderHistory.cshtml",
+              "RelativeToolTip": "Shopping_Tutorial\\Views\\Account\\OrderHistory.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAAUwDAAAACKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T06:18:27.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "Shopping_Tutorial\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ToolTip": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "Shopping_Tutorial\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACQAAACVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T04:34:25.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Shopping_Tutorial\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "ToolTip": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Shopping_Tutorial\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwAoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T03:01:33.595Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 55,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "d48de500-0c46-4b20-a4fa-52034cfb3e7e",
+        "Display": 0,
+        "X": 694,
+        "Y": 51,
+        "Width": 1177,
+        "Height": 574,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PaymentInfoVnpay.cshtml",
+              "DocumentMoniker": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Areas\\Admin\\Views\\Order\\PaymentInfoVnpay.cshtml",
+              "RelativeDocumentMoniker": "Shopping_Tutorial\\Areas\\Admin\\Views\\Order\\PaymentInfoVnpay.cshtml",
+              "ToolTip": "D:\\Lap_Trinh_ASP.NET\\Shopping_Tutorial\\Shopping_Tutorial\\Areas\\Admin\\Views\\Order\\PaymentInfoVnpay.cshtml",
+              "RelativeToolTip": "Shopping_Tutorial\\Areas\\Admin\\Views\\Order\\PaymentInfoVnpay.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAuwBsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T06:35:13.876Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

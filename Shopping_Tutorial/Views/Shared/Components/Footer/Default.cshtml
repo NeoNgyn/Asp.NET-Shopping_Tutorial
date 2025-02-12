@@ -1,0 +1,23 @@
+﻿@model ContactModel
+<div class="row">
+	<div class="col-sm-2">
+		<div class="companyinfo">
+			<img src="~/media/contacts/@Model.LogoImage" width="200px" height="200px"/>
+			<p>@Html.Raw(@Model.Description)</p>
+		</div>
+	</div>
+	<div class="col-sm-7">
+		<div class="col-sm-4">
+			@Html.Raw(Model.Map)
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="address">
+			<h5><b>Name : @Model.Name</b></h5>
+			<h5>Email : @Model.Email</h5>
+			<h5>@Model.Phone</h5>
+
+		</div>
+	</div>
+
+</div>

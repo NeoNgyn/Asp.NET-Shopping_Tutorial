@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["title"] = "User List";
+}
+<h4>List User</h4>
+<a class="btn btn-success" asp-area="Admin" asp-action="Create" asp-controller="User">Add new User</a>
+<table class="table" id="mytable">
+    <thead>
+        <tr>
+            <th scope="col">User Id</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Phone</th>
+            <th>Role</th>
+            <th>Manage</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <th scope="row">@user.User.Id</th>
+                <td>@user.User.UserName</td>
+                <td>@user.User.Email</td>
+                <td>@user.User.PasswordHash</td>
+                <td>@user.User.PhoneNumber</td>
+                <td>@user.RoleName</td>
+
+                
+                <td>
+                    @if(user.User.Id != ViewBag.loggedInUserId){
+                        @if(user.RoleName != "Admin"){
+                            <a class="btn btn-warning" asp-action="Update" asp-controller="User" asp-route-id="@user.User.Id">
+                                <i class="bi bi-pencil"></i>
+                                Edit
+                            </a>
+                            <a class="btn btn-danger confirmDeletion" asp-action="Delete" asp-controller="User" asp-route-id="@user.User.Id">
+                                <i class="bi bi-trash"></i>
+                                Delete
+                            </a>
+                        }
+                    }
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,159 @@
+﻿@model StatisticalModel
+
+@{
+    ViewData["title"] = "Dashboard";
+}
+<h4>Dashboard Statistics</h4>
+<div class="row">
+    <div class="col-md-3">
+        <p>Product Statistics</p>
+        @ViewBag.ProductCount
+    </div>
+    <div class="col-md-3">
+        <p>Order Statistics</p>
+        @ViewBag.OrderCount
+    </div>
+    <div class="col-md-3">
+        <p>Category Statistics</p>
+        @ViewBag.CategoryCount
+    </div>
+    <div class="col-md-3">
+        <p>User Statistics</p>
+        @ViewBag.UserCount
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h4>Filter data by:</h4>
+            <select class="filter-select">
+                <option value="30">---Filter Data---</option>
+                <option value="7">---Last 7 days---</option>
+                <option value="30">---Last Month---</option>
+                <option value="90">---Last 3 Months---</option>
+                <option value="365">---Last Year---</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <h4>Option:</h4>
+            <label>From:</label>
+            <input type="date" class="form-control" id="date_from" asp-for="@Model.DateCreated" />
+            <label>To:</label>
+            <input type="date" class="form-control" id="date_to" asp-for="@Model.DateCreated" />
+            <button id="filterButton" class="btn btn-primary">Filter</button>
+        </div>
+    </div>
+    <div class="row">
+        <h4>Statistic Chart</h4>
+        <div id="myfirstchart" style="height: 250px;"></div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            var chartMorris = new Morris.Line({
+                element: 'myfirstchart',
+                data: [],
+                xkey: 'date',
+                ykeys: ['sold', 'quantity', 'revenue', 'profit'],
+                labels: ["Sold Quantity", "Order", "Revenue", "Profit"]
+            });
+
+            // Fetch default chart data
+            $.ajax({
+                url: "@Url.Action("GetChartData", "Dashboard")",
+                type: "POST",
+                dataType: "json",
+                success: function(data){
+                    if (data){
+                        chartMorris.setData(data.map(function (item){
+                            return {
+                                date: item.date,
+                                sold: item.sold,
+                                quantity: item.quantity,
+                                revenue: item.revenue,
+                                profit: item.profit
+                            };
+                        }));
+                    } else {
+                        console.warn("No data received for Morris chart update.");
+                        chartMorris.setData([]);
+                    }
+                },
+                error: function (error){
+                    console.error("Error fetching data: ", error);
+                }
+            });
+
+            // Event listener for filtering
+            $('.filter-select').on('change', function () {
+                var days = $(this).val();
+                var endDate = new Date();
+                var startDate = new Date(endDate.getTime() - (days * 24 * 60 * 60 * 1000));
+
+                $.ajax({
+                    url: "@Url.Action("GetChartDataBySelect", "Dashboard")",
+                    type: "POST",
+                    dataType: "json",
+                    data: {
+                        startDate: startDate.toISOString().split('T')[0],
+                        endDate: endDate.toISOString().split('T')[0] 
+                    },
+                    success: function (data) {
+                        if (data) {
+                            chartMorris.setData(data.map(function (item){
+                                return {
+                                    date: item.date,
+                                    sold: item.sold,
+                                    quantity: item.quantity,
+                                    revenue: item.revenue,
+                                    profit: item.profit
+                                };
+                            }));
+                        } else {
+                            console.warn("No data received for Morris chart update.");
+                            chartMorris.setData([]);
+                        }
+                    },
+                    error: function (error){
+                        console.error("Error fetching data: ", error);
+                    }
+                });
+            });
+
+            //Filter by option
+            $("#filterButton").click(function (){
+                var fromDate = $("#date_from").val();
+                var toDate = $("#date_to").val();
+
+                $.ajax({
+                    url: "@Url.Action("FilterData", "Dashboard")",
+                    dataType: "json",
+                    type: "POST",
+                    data: {fromDate: fromDate, toDate: toDate},
+                    success: function (data) {
+                        if (data) {
+                            chartMorris.setData(data.map(function (item){
+                                return {
+                                    date: item.date,
+                                    sold: item.sold,
+                                    quantity: item.quantity,
+                                    revenue: item.revenue,
+                                    profit: item.profit
+                                };
+                            }));
+                        } else {
+                            console.warn("No data received for Morris chart update.");
+                            chartMorris.setData([]);
+                        }
+                    },
+                    error: function (error){
+                        console.error("Error fetching data: ", error);
+                    }
+                });
+            });
+        });
+
+    </script>
+}
